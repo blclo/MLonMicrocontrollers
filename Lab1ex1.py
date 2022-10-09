@@ -115,3 +115,25 @@ print("Now we have the image shape {}".format(test_image.shape))
 plt.imshow(test_image)
 
 print("The test image was number {} and the predicted one {}".format(y_test[-1:], y_pred[-1:]))
+
+
+# USing the tree classifier
+# import the decision tree
+from sklearn import tree
+X_train, X_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size = 0.2, random_state = 0)
+
+# declare the classifier
+clf = tree.DecisionTreeClassifier()
+
+# fit the model
+clf.fit(X_train, y_train)  
+
+# predict using the trained model
+y_pred = clf.predict(X_test)
+
+# How is the test accuracy?
+from sklearn.metrics import accuracy_score
+test_acc = accuracy_score(y_test, y_pred, normalize=True)
+n_correct = accuracy_score(y_test, y_pred, normalize=False)
+print("Number of correctly classified samples is {}, total number of samples is {}.".format(n_correct, len(y_test)))
+print("The test accuracy, defined as number of correctly classified samples over total number of test samples, is {:.2f}%".format(test_acc*100))
