@@ -1,0 +1,111 @@
+---
+# HWC (little data) configuration for CIFAR10 NAS Model
+# Simple Model
+
+arch: fullsimplenetvfinal
+dataset: CIFAR10
+
+layers:
+  - out_offset: 0x4000
+    processors: 0x0000000000000007  # 1
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+    data_format: HWC
+  - out_offset: 0x0000
+    processors: 0xffffffffffffffff  # 2
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+  - out_offset: 0x4000
+    processors: 0x00000000ffffffff  # 3
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+  - out_offset: 0x0000
+    processors: 0x00000000ffffffff  # 4
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+  - max_pool: 2 # maxpool 1
+    pool_stride: 2
+    out_offset: 0x4000
+    processors: 0x00000000ffffffff
+    op: None
+  - out_offset: 0x0000
+    processors: 0x00000000ffffffff  # 5
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+  - out_offset: 0x4000
+    processors: 0x00000000ffffffff  # 6
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+  - out_offset: 0x0000
+    processors: 0x00000000ffffffff  # 7
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+  - max_pool: 2 # maxpool 2
+    pool_stride: 2
+    out_offset: 0x4000
+    processors: 0x00000000ffffffff
+    op: None
+  - out_offset: 0x0000
+    processors: 0x00000000ffffffff  # 8
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+  - out_offset: 0x4000
+    processors: 0x00000000ffffffff  # 9
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+  - max_pool: 2 # maxpool 3
+    pool_stride: 2
+    out_offset: 0x0000
+    processors: 0x00000000ffffffff
+    op: None
+  - out_offset: 0x4000
+    processors: 0x00000000ffffffff  # 10
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+  - max_pool: 2 # maxpool 4
+    pool_stride: 2
+    out_offset: 0x0000
+    processors: 0x00000000ffffffff
+    op: None
+  - out_offset: 0x4000
+    processors: 0x00000000ffffffff  # 11
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+   - out_offset: 0x0000
+    processors: 0xffffffffffffffff  # 12
+    operation: conv2d
+    kernel_size: 3x3
+    pad: 1
+    activate: ReLU
+  - max_pool: 2 # maxpool 5
+    pool_stride: 2
+    out_offset: 0x4000
+    processors: 0x00000000ffffffff
+  - flatten: true
+    out_offset: 0x0000
+    processors: 0xffffffffffffffff #13
+    operation: MLP
+    output_width: 32
+    activate: None
