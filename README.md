@@ -41,4 +41,4 @@ An example of the setup using the camera and the model classification can be see
 
 ![results](media/results.png)
 
-The full presentation can be found under the final_presentation.pdf file.
+The full presentation can be found under the [final_presentation.pdf](https://github.com/blclo/MLonMicrocontrollers/blob/main/final_presentation.pdf) file.
