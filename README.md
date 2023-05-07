@@ -27,7 +27,7 @@ Explicar como se implementa en el Maxim78000
 Los códigos que usamos para entrenar nuestros modelos
 
 ## Results CIFAR 10
-- CMSISNNET is 50.3 times faster ran in MAXIM 78000 than in the STM 32 Nucleo 144 used by the paper.
+- **CMSISNNET is 50.3 times faster ran in MAXIM 78000** than in the STM 32 Nucleo 144 used by the paper.
     - We are able to classify 507 6 images/s with an accuracy of 87.15%
     - The paper presented 10.1 images/s with an accuracy of 79.9%
 
