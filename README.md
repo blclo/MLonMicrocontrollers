@@ -14,7 +14,8 @@ The code found on this repo contains the necessary files to run the models and t
 
     ├── README.md          <- The top-level README for developers using this project.
     │
-    ├── demo           <- to be used with Eclipse SDK
+    ├── mcu_demo_setup           <- python scripts for MCU demo
+    ├── cifar10_cmsisnnet_EclipseSDK    <- C files to be used with Eclipse SDK
     ├── media          <- pictures in README.md
     ├── logs.zip       <- ZIP file including results from models runs
     └── src                <- Source code for use in this project.
@@ -34,11 +35,10 @@ Before our project we analysed the current State Of The Art in Image Classificat
 ![stateart](media/state-of-the-art.png)
 
 ## Implementation on MAXIM78000
-Explicar como se implementa en el Maxim78000
+To be explained soon.
 
 ## Model Architecture
-
-Los códigos que usamos para entrenar nuestros modelos
+To be explained soon.
 
 ## Results CIFAR 10
 - **CMSISNNET is 50.3 times faster ran in MAXIM 78000** than in the STM 32 Nucleo 144 used by the paper.
