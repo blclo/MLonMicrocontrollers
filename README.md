@@ -10,6 +10,20 @@ It consists of an **Image clasifier trained on Cifar 10&100 and implemented on a
 The code found on this repo contains the necessary files to run the models and try out our results.
 
 ## File Organization
+------------
+
+    ├── README.md          <- The top-level README for developers using this project.
+    │
+    ├── demo           <- to be used with Eclipse SDK
+    ├── media          <- pictures in README.md
+    ├── logs.zip       <- ZIP file including results from models runs
+    └── src                <- Source code for use in this project.
+        ├── data           <- Scripts to download or generate data
+        │   └── cifar100.py
+        │
+        └── policies       <- Required in Bash Files SetUp
+        └── models         <- Scripts to train models modified from Maxim Integrated Products 
+
 
 ## Datasets used
 ![datasets](media/dataset_presentation.png)
