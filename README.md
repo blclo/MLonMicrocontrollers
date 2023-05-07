@@ -1,24 +1,23 @@
 # Machine Learning on MCU - Image Classifier
 
 This repo contains @visaub's & @blclo's results for ML on Microcontrollers course at @ETH Zurich.
+#### The main goal of the project is achieving the **right trade-off** between **model accuracy, latency and power consumption** given the limitations of the MCU. 
 
-![intro_image_taken_with_mcu](media\welcome_picture.png)
+![intro_image_taken_with_mcu](media/welcome_picture.png)
 
 It consists of an **Image clasifier trained on Cifar 10&100 and implemented on a microcontroller with a neural accelerator - [Maxim78000](https://github.com/MaximIntegratedAI/MaximAI_Documentation/blob/master/MAX78000_Feather/README.md)**
 
 The code found on this repo contains the necessary files to run the models and try out our results.
 
-- The main goal of the project is achieving the **right trade-off** between **model accuracy, latency and power consumption** given the limitations of the MCU. 
-
 ## File Organization
 
 ## Datasets used
-![datasets](media\dataset_presentation.png)
+![datasets](media/dataset_presentation.png)
 
 ## State-Of-The-Art
 Before our project we analysed the current State Of The Art in Image Classification on MCUs. Two main papers were found, with results below:
 
-![stateart](media\state-of-the-art.png)
+![stateart](media/state-of-the-art.png)
 
 ## Implementation on MAXIM78000
 Explicar como se implementa en el Maxim78000
@@ -40,6 +39,6 @@ Los códigos que usamos para entrenar nuestros modelos
 
 An example of the setup using the camera and the model classification can be seen in the image below.
 
-![results](media\results.png)
+![results](media/results.png)
 
 The full presentation can be found under the final_presentation.pdf file.
